@@ -1,0 +1,11 @@
+*.aux
+*.dvi
+*.pdf
+*.log
+*.blg
+*.toc
+*.lof
+*.lot
+*.bcf
+*.bbl
+paper.run.xml

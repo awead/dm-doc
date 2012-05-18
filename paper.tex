@@ -1,0 +1,72 @@
+% Doctoral document
+% by Adam Wead
+\documentclass[12pt,letterpaper,onesided]{book}
+
+% Packages
+\usepackage{ifpdf}
+\usepackage{styles/mla}
+%\usepackage{styles/test}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage[american]{babel}
+%\usepackage[english]{babel}
+\usepackage{subfloat}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+%\usepackage{graphicx}
+\usepackage{caption}
+%\usepackage{subcaption}
+
+
+%\usepackage{csquotes}
+%\usepackage[style=authortitle-ibid,autocite=footnote,backend=biber]{biblatex}
+\usepackage[style=mla,autocite=footnote]{biblatex}
+\bibliography{works}
+
+% This is so you can use \autocite.  I should look into using \smartcite, with a
+% different citation style
+\DeclareAutoCiteCommand{footnote}[f]{\footcite}{\footcites}
+
+
+% Colors
+\usepackage{color}
+%\definecolor{markers}{gray}{0.50}
+\definecolor{markers}{RGB}{153,0,0}
+\definecolor{strings}{gray}{0.75}
+
+\author{Adam Wead}
+\title{LUTE TUNING AND TEMPERAMENT IN THE SIXTEENTH AND SEVENTEENTH CENTURIES}
+
+\begin{document}
+
+% Front matter
+\frontmatter
+\maketitle
+\tableofcontents
+\listoftables
+\listoffigures
+
+% Main paper
+\mainmatter
+\include{introduction}
+\include{tuning}
+\include{fretting}
+\include{today}
+
+% Stuff at the end
+\include{appendix}
+
+% Bibliography
+% first, dump out all our sources
+\nocite{
+    ML:1,
+    LG:1,
+    CN:1,
+    RR:1,
+    TJM:1,
+    BH:1,
+    RD:1}
+\printbibliography
+
+\end{document}

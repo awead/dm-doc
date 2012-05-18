@@ -1,0 +1,5 @@
+#!/bin/bash
+for f in `ls *.yml`;
+  do
+    perl draw.pl $f
+done 

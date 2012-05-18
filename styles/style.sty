@@ -1,0 +1,164 @@
+% Latex stylesheet
+% Adam Wead
+%
+% Adapted from University of Georgia
+% ugastyle.sty
+
+\ProvidesPackage{style}
+
+% ----------------------------------
+% Margins And Page Layout
+% ----------------------------------
+
+% Pages are numbered at the upper right,
+% except that the first page of each chapter
+% is numbered at the bottom.
+\pagestyle{myheadings}
+\markboth{}{}
+
+% makes all pages the height of the text on that page.
+% No extra vertical space is added.
+\raggedbottom
+
+% space between last top float or first bottom float and the text
+\textfloatsep 1in
+
+% space left between floats
+\floatsep 0.75in
+
+% tells LaTeX not to insert extra space at the end of sentences
+\frenchspacing
+
+% (Following copied from SUTHESIS.STY, Stanford University.)
+% We need 1" margins except on the binding edge, where it is 1 1/2"
+% so we add 1/2 to the left making in 1.5 total
+% Theses are single-sided, so we don't care about \evensidemargin
+\oddsidemargin 0.5in
+\evensidemargin 0in
+\marginparwidth 40pt
+\marginparsep 10pt
+
+% IFRuderfer 200310231026
+% \topmargin -0.15in
+\topmargin -0.6in
+
+% IFRuderfer 200310231330
+% \headsep .18in
+\headsep .4in
+
+% 1 in top and bottom
+% 11 - (1 + 1) = 9
+\textheight 9.00in
+
+% 1 in on the right, 1.5 on the left
+% 8.5 - (1.5 + 1) = 6
+\textwidth 6in
+
+\footskip 0.37in    % default is 0.5 in and page numbers come out too low
+
+% Reduce the overall amount of hyphenation
+% These aren't usable with TeX versions lower than 3.0.
+% If you are using a lower version of TeX, delete the next 3 lines.
+\emergencystretch=0.2in
+\lefthyphenmin=3
+\righthyphenmin=4
+
+% Half-inch paragraph indents
+\parindent=.5in
+
+% Disallow page breaks at hyphens, except where the only alternative
+% is a widow or orphan (club)
+\brokenpenalty=9900
+
+% Disallow all widows and orphans (clubs)
+\widowpenalty=10000
+\clubpenalty=10000
+
+% Use 1.65 times the normal baseline-to-baseline skip
+% for the appearance of double spacing
+% ME: chaged this to 2 (too much?)
+\renewcommand{\baselinestretch}{2}
+
+% Print footnotes in small (not tiny) type
+\let\footnotesize\small
+
+% Redefine the macro used for floats (including figures and tables)
+% so that single spacing is used.
+% (Note \def\figure{\@float{figure}set single spacing} doesn't work
+%  because figure has an optional argument)
+\def\@xfloat#1[#2]{\ifhmode \@bsphack\@floatpenalty -\@Mii\else
+   \@floatpenalty-\@Miii\fi\def\@captype{#1}\ifinner
+      \@parmoderr\@floatpenalty\z@
+    \else\@next\@currbox\@freelist{\@tempcnta\csname ftype@#1\endcsname
+       \multiply\@tempcnta\@xxxii\advance\@tempcnta\sixt@@n
+       \@tfor \@tempa :=#2\do
+                        {\if\@tempa h\advance\@tempcnta \@ne\fi
+                         \if\@tempa t\advance\@tempcnta \tw@\fi
+                         \if\@tempa b\advance\@tempcnta 4\relax\fi
+                         \if\@tempa p\advance\@tempcnta 8\relax\fi
+         }\global\count\@currbox\@tempcnta}\@fltovf\fi
+    \global\setbox\@currbox\vbox\bgroup
+    \def\baselinestretch{1}\@normalsize
+    \boxmaxdepth\z@
+    \hsize\columnwidth \@parboxrestore}
+
+% Redefine the macro used for footnotes to use single spacing
+\long\def\@footnotetext#1{
+    \insert\footins{
+        \def\baselinestretch{1}\footnotesize
+        \interlinepenalty\interfootnotelinepenalty
+        \splittopskip\footnotesep
+        \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
+        \hsize\columnwidth \@parboxrestore
+        \edef\@currentlabel{\csname p@footnote\endcsname\@thefnmark}\@makefntext{
+            \rule{\z@}{\footnotesep}\ignorespaces
+            #1\struti
+        }
+    }
+}
+
+% Define environment 'singlespace', which can be used within other
+% environments such as 'quote' (but not 'verbatim') to force single
+% spacing.  From doublespace.sty; originally credited to MIT.
+
+\def\singlespace{
+    \vskip\parskip
+    \vskip\baselineskip
+    \def\baselinestretch{1}
+    \ifx\@currsize\normalsize\@normalsize\else\@currsize\fi
+    %\tiny\normalsize
+    \vskip-\parskip
+    \vskip-\baselineskip
+}
+
+\def\endsinglespace{\par}
+
+% Redefine 'verbatim' so that it always single-spaces.
+% Michael A. Covington 1992
+
+% If you want 'verbatim' to double-space, simply make your own
+% copy of uga.sty in which this code is commented out.
+
+\def\@verbatim{
+    \trivlist
+    \vskip\topskip
+    %\vskip\parskip
+    %\setlength{\partopsep}{0pt}
+    \def\baselinestretch{1}
+    \ifx\@currsize\normalsize\@normalsize\else\@currsize\fi
+    %\tiny\normalsize
+    \vskip-\topskip
+    %\vskip-\parskip
+    \item[]\if@minipage\else\vskip\parskip\fi
+    \leftskip\@totalleftmargin\rightskip\z@
+    \parindent\z@\parfillskip\@flushglue\parskip\z@
+    \@tempswafalse \def\par{\if@tempswa\hbox{}\fi\@tempswatrue\@@par}
+    \obeylines \tt \catcode``=13 \@noligs \let\do\@makeother \dospecials
+}
+
+\def\verbatim{\@verbatim \frenchspacing\@vobeyspaces \@xverbatim}
+
+\let\endverbatim=\endtrivlist
+
+
+
