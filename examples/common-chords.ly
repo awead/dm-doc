@@ -23,7 +23,7 @@
     \clef bass
     \time 4/4
     \key c \major
-    <e, ges b e b>2  ^\markup \fret-diagram #"w:8;8-x;7-x;6-x;5-2;4-1;3-o;2-o;1-2;"
+    <e, gis b e b>2  ^\markup \fret-diagram #"w:8;8-x;7-x;6-x;5-2;4-1;3-o;2-o;1-2;"
     s2
     <f c' f aes, c>2  ^\markup \fret-diagram #"w:8;h:6;c:5-1-3;8-x;7-x;6-x;5-3;4-5;3-6;2-4;1-3;"
     s2
