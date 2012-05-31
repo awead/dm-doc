@@ -1,0 +1,30 @@
+---
+00.00: 'fret, Nut'
+02.27: 'pitch,A$\flat$ d$\flat$ g$\flat$ b$\flat$ e$\flat$'' a$\flat$'''
+04.54: 'fret, 1st (diatonic)'
+05.97: 'pitch,A d g b e'' a'''
+07.40: 'fret, 2nd (chromatic)'
+09.44: 'pitch,B$\flat$ e$\flat$ a$\flat$ c'' f'' b$\flat$'''
+11.47: 'fret, 3rd (diatonic)'
+12.75: 'pitch,B e a c$\sharp$'' f$\sharp$'' b'''
+14.03: 'fret, 4th (chromatic)'
+15.85: 'pitch,c f b$\flat$ d'' g'' c'''''
+17.66: 'fret, 5th (diatonic)'
+18.81: 'pitch,c$\sharp$ f$\sharp$ b d$\sharp$'' g$\sharp$'' c$\sharp$'''''
+19.95: 'fret, 6th (chromatic)'
+21.57: 'pitch,d g c'' e'' a'' d'''''
+23.19: 'fret, 7th (diatonic)'
+24.71: 'pitch,e$\flat$ a$\flat$ d$\flat$'' f'' b$\flat$'' e$\flat$'''''
+26.23: 'fret, 8th (diatonic)'
+27.19: 'pitch,e a d'' f$\sharp$'' b'' e'''''
+28.15: 'fret, 9th (chromatic)'
+29.51: 'pitch,f b$\flat$ e$\flat$'' g'' c'''' f'''''
+30.86: 'fret, 10th (diatonic)'
+31.72: 'pitch,f$\sharp$ b e'' g$\sharp$'' c$\sharp$'''' f$\sharp$'''''
+32.57: 'fret, 11th (chromatic)'
+33.79: 'pitch,g c'' f'' a'' d'''' g'''''
+35.00: 'fret, 12th (diatonic)'
+--- Complete quarter-comma fretting for lute in G
+--- 0.5mm
+--- G
+--- with string names
