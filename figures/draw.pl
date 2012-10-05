@@ -227,15 +227,15 @@ EOF
 \\color{black}
 \\put(2,$top){\\small{A}}
 % 5th
-\\put(14,$top){\\small{D}}
+\\put(14,$top){\\small{d}}
 % 4th
-\\put(24,$top){\\small{G}}
+\\put(24,$top){\\small{g}}
 % 3rd
 \\put(34,$top){\\small{b}}
 % 2nd
-\\put(43,$top){\\small{e}}
+\\put(43,$top){\\small{e'}}
 % 1st
-\\put(53,$top){\\small{a}}
+\\put(53,$top){\\small{a'}}
 EOF
 
   }
