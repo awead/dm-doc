@@ -1,25 +1,27 @@
 % Doctoral document
-% by Adam Wead
-%\documentclass[12pt,letterpaper,onesided]{book}
+% Adam Wead
+
+%
+% Setup
+%
+
 \documentclass[12pt,letterpaper]{book}
 
 % Packages
 \usepackage{ifpdf}
-\usepackage{styles/mla}
-%\usepackage{styles/test}
+\usepackage{styles/local} % my local style settings
 \usepackage{setspace}
 \usepackage[utf8]{inputenc}
 \usepackage[american]{babel}
-%\usepackage[english]{babel}
+\usepackage{csquotes}
 \usepackage{subfloat}
 \usepackage{amsmath}
 \usepackage{multirow}
 \usepackage[table]{xcolor}
-%\usepackage{graphicx}
 \usepackage{caption}
-%\usepackage{subcaption}
 \usepackage{fancyhdr}
 
+% Setting up page styles
 \pagestyle{fancy}
 \lhead{}
 \chead{}
@@ -29,21 +31,28 @@
 \rfoot{}
 \renewcommand{\headrulewidth}{0pt}
 
-%\usepackage{csquotes}
-%\usepackage[style=authortitle-ibid,autocite=footnote,backend=biber]{biblatex}
-\usepackage[style=mla,autocite=footnote]{biblatex}
-\bibliography{works}
+% Bibliographic and footnote settings
 
-% This is so you can use \autocite.  I should look into using \smartcite, with a
-% different citation style
-\DeclareAutoCiteCommand{footnote}[f]{\footcite}{\footcites}
+% Previous mla style
+%\usepackage[style=mla,autocite=footnote]{biblatex}
+%\bibliography{works}
+%\DeclareAutoCiteCommand{footnote}[f]{\footcite}{\footcites}
 
+% new Chicago style
+\usepackage[autocite=footnote]{biblatex-chicago}
+\ExecuteBibliographyOptions{backend=biber}
+\DeclareFieldFormat[article]{title}{\mkbibquote{#1}} % make article titles in quotes
+\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % make theses italics
+\addbibresource{works.bib}
 
-% Colors
+% Defining colors I use in the drawings
 \usepackage{color}
-%\definecolor{markers}{gray}{0.50}
 \definecolor{markers}{RGB}{153,0,0}
 \definecolor{strings}{gray}{0.75}
+
+%
+% The Paper
+%
 
 \author{Adam Wead}
 \title{LUTE TUNING AND TEMPERAMENT IN THE SIXTEENTH AND SEVENTEENTH CENTURIES}
@@ -65,11 +74,8 @@
 \include{today}
 \include{solutions}
 
-% Stuff at the end
+% Back matter
 \include{appendix}
-
-% Bibliography
-% first, dump out all our sources
 \nocite{*}
 \printbibliography
 
