@@ -1,6 +1,5 @@
 *.aux
 *.dvi
-*.pdf
 *.log
 *.blg
 *.toc
