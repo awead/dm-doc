@@ -7,5 +7,6 @@
 *.lot
 *.bcf
 *.bbl
+.DS_Store
 paper.run.xml
 paper.pdf
