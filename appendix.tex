@@ -12,10 +12,15 @@ Below is a set of tables for determining the placement of a fret or pitch for an
 temperaments discussed in this paper. Table ~\ref{calc-12} covers fetting systems with
 12 individual frets.  Table ~\ref{calc-19} covers enharmonic fretting systems where
 a total of 19 frets are possible, and assumes a standard Renaissance lute pitch of
-G.  Because of this assumption, frets for B$\sharp$ and E$\sharp$ are provided, but
-this will vary for lutes tuned in F, A or other nominal pitches.
+G.  Because of this assumption, frets for B$\sharp$ and E$\sharp$ are provided so 
+we can also place frets for lutes tuned in F, A, or other nominal pitches.
 
-To determine the placement of a given fret 
+To determine the placement of a given fret, find the coefficient for the pitch
+you wish to use and multiply it by your mensur length.  Use the resulting value,
+and measure from the nut to find the exact position of the fret.  For example,
+if a lute has a mensur of 65 centimeters, and we want to use Dowland's first fret,
+multiply 65 by 0.0606 for a value of 3.939.  That is the distance, in centimeters,
+from the nut to the first fret using Dowland's own placement.
 
 \input{tables/calc-12}
 
