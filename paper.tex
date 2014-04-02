@@ -33,15 +33,10 @@
 \renewcommand{\headrulewidth}{0pt}
 
 % Bibliographic and footnote settings
-
-% Previous mla style
-%\usepackage[style=mla,autocite=footnote]{biblatex}
-%\bibliography{works}
-%\DeclareAutoCiteCommand{footnote}[f]{\footcite}{\footcites}
-
-% new Chicago style
-\usepackage[autocite=footnote]{biblatex-chicago}
-\ExecuteBibliographyOptions{backend=biber}
+\usepackage[
+  backend=biber,
+  autocite=footnote
+]{biblatex-chicago}
 \DeclareFieldFormat[article]{title}{\mkbibquote{#1}} % make article titles in quotes
 \DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % make theses italics
 \addbibresource{works.bib}
