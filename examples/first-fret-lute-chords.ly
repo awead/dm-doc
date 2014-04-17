@@ -14,7 +14,7 @@
 
 
 
-\relative {
+\absolute {
   
   <<  
     \new Staff {   
@@ -27,11 +27,11 @@
       \time 4/4
       \key c \major
       \new Voice {
-        <d bes'>2  ^\markup \fret-diagram #"w:6;6-3;5-x;4-o;3-1;2-o;1-3;"
+        <d' bes'>2  ^\markup \fret-diagram #"w:6;6-3;5-x;4-o;3-1;2-o;1-3;"
         s2
-        <ees bes'>2  ^\markup \fret-diagram #"w:6;6-x;5-3;4-2;3-1;2-1;1-3;"
+        <ees' bes'>2  ^\markup \fret-diagram #"w:6;6-x;5-3;4-2;3-1;2-1;1-3;"
         s2
-        <ees aes>2  ^\markup \fret-diagram #"w:6;6-1;5-1;4-3;3-3;2-3;1-1;"
+        <ees' aes'>2  ^\markup \fret-diagram #"w:6;6-1;5-1;4-3;3-3;2-3;1-1;"
         s2
       }
     }
@@ -46,11 +46,11 @@
       \time 4/4
       \key c \major
       \new Voice {
-        <bes, f' bes>2
+        <bes, f bes>2
         s2
         <ees g bes>2
         s2
-        <aes, des aes' c>2
+        <aes, ees aes c'>2
         s2
       }
 

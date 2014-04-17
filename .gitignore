@@ -10,3 +10,5 @@
 .DS_Store
 paper.run.xml
 paper.pdf
+tmp/
+paper-diff.*
