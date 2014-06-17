@@ -1,4 +1,4 @@
-ALL: paper
+all: paper pdfa
 
 paper:
 	pdflatex paper && biber paper && pdflatex paper && pdflatex paper
