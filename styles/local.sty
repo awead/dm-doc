@@ -2,87 +2,22 @@
 % Adam Wead
 
 % PDF generation
-% (thanks to Edward Z. Yang)
-\ifpdf
-    \usepackage[pdftex]{color,graphicx}
-    \pdfpagewidth=\paperwidth
-    \pdfpageheight=\paperheight
-    \usepackage{thumbpdf}
-    %\pdfcompresslevel=9
-\else
-    \usepackage[dvips]{graphicx}
-\fi
-
+\usepackage[pdftex]{color,graphicx}
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+\usepackage{thumbpdf}
 
 %
-% Font packages (disabled for now)
+% Font
 %
-%\usepackage{times}
+\usepackage{times}
 %\usepackage{bookman}
 %\usepackage{helvet}
 
 %
-% fixes headings
-%
-\pagestyle{headings}
-
-%
-% page size
-%
-% 1.5 on the left, 1 on the right
-% making 6in total width
-%
-\setlength{\paperheight}{11in}
-\setlength{\paperwidth}{8.5in}
-\setlength{\textwidth}{6.0in}
-\setlength{\textheight}{9in}
-\setlength{\footskip}{40pt}
-
-%
-% borders
-%
-% horizontal offset takes into account
-% larger left margin
-%
-\setlength{\hoffset}{0.5in}
-\setlength{\voffset}{-1in}
-
-%
-% eliminates margin notes
-%
-\setlength{\oddsidemargin}{0in}
-\setlength{\evensidemargin}{0in}
-\setlength{\marginparwidth}{0in}
-\setlength{\marginparpush}{0in}
-\setlength{\marginparsep}{0in}
-
-%
-% Double space
-%
-\linespread{2}
-
-%
-% Places heading 1/2 inch from top of page
-%
-\setlength{\topmargin}{.5in}
-\setlength{\headsep}{18pt}
-
-
-%
-% my page headings
-%
-\pagestyle{myheadings}
-\markboth{}{}
-
-%
-%   Block quote environment
+% Block Quotes
 %
 \newenvironment{blocks}{\begin{quote} \linespread{1} \small \normalsize}{\end{quote} \linespread{2} \small \normalsize}
 \newenvironment{blockm}{\linespread{1} \begin{quotation} \small \normalsize}{\end{quotation} \linespread{2} \small \normalsize}
 \newenvironment{centerblocks}{\begin{center} \linespread{1} \small \normalsize}{\end{center} \linespread{2} \small \normalsize}
 \newenvironment{rightblocks}{\begin{center} \linespread{1} \small \normalsize}{\end{center} \linespread{2} \small \normalsize}
-
-
-
-
-
