@@ -11,8 +11,9 @@ Manual of Style.
 
 ### Document Status
 
-The paper is scheduled to be finished in 2013.  While the bulk of the writing is done, I'll be making
-additional corrections as comments come in from my committee members.
+It was published in 2014 and is available via IUScholarWorks
+
+[http://hdl.handle.net/2022/18424](http://hdl.handle.net/2022/18424)
 
 ### Why is this here?
 
@@ -34,9 +35,7 @@ of the paper, or download the entire project and generate the paper in pdf forma
 ##### Create the pdf
 
 * Clone the project to your computer using git
-* run pdflatex paper
-* run biber paper
-* run pdflate paper (twice)
+* run make all
 
 You should have a file called paper.pdf in the root of the project folder.
 
